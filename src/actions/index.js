@@ -11,9 +11,12 @@ export function fetchWeather(city) {
 	const url = `${ROOT_URL}&q=${city},us`;
   const request = axios.get(url);
 
+  console.log('Request:', request);
+
 	return {
       type: FETCH_WEATHER,
       //payload are optional property that goes along with actions that contains additional data that describes this particular action
+      //returning the request, the promise, on the payload here
       payload: request
 		};
 }
