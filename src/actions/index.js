@@ -8,14 +8,14 @@ const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KE
 export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 export function fetchWeather(city) {
-	const url = `${ROOT_URL}&q=${city},us`;
+  const url = `${ROOT_URL}&q=${city},us`;
   const request = axios.get(url);
 
 
-	return {
+  return {
       type: FETCH_WEATHER,
       //payload are optional property that goes along with actions that contains additional data that describes this particular action
       //returning the request, the promise, as the payload
       payload: request
-		};
+    };
 }
